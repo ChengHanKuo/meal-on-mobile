@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MealOnMobileFifthViewController : UIViewController
-
+@interface MealOnMobileFifthViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) NSMutableArray *listData;
+@property (strong, nonatomic) NSMutableDictionary *names;
+@property (strong, nonatomic) NSMutableArray *keys;
+@property (strong, nonatomic) NSMutableArray *detail;
+@property (nonatomic, readonly, retain) NSString *uniqueIdentifier;
 @end

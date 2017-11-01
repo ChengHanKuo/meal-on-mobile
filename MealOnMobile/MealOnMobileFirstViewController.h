@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MealOnMobileFirstViewController : UIViewController
+@interface MealOnMobileFirstViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+{
+    CLLocationManager *locationManager;
+}
+@property (weak, nonatomic) IBOutlet MKMapView *mapDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *distanceDisplay;
+@property (weak, nonatomic) IBOutlet UITextView *addressInput;
 
 @end
